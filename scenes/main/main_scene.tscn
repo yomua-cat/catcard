@@ -1,0 +1,167 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://scenes/main/main_scene.gd" id="1_main"]
+[ext_resource type="Script" path="res://ui/screens/logo_screen.gd" id="2_logo"]
+[ext_resource type="Script" path="res://ui/screens/login_screen.gd" id="3_login"]
+[ext_resource type="Script" path="res://ui/screens/loading_screen.gd" id="4_loading"]
+[ext_resource type="Theme" path="res://ui/themes/main_theme.tres" id="5_theme"]
+
+[sub_resource type="Environment" id="Environment_main"]
+background_mode = 1
+background_color = Color(0.0784314, 0.0784314, 0.0784314, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.5, 0.5, 0.5, 1)
+tonemap_mode = 3
+glow_enabled = true
+glow_bloom = 0.2
+glow_blend_mode = 0
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_main"]
+dof_blur_far_enabled = true
+dof_blur_far_distance = 15.0
+dof_blur_amount = 0.05
+
+[node name="MainScene" type="Node3D"]
+script = ExtResource("1_main")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_main")
+
+[node name="MainCamera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 3, 8)
+attributes = SubResource("CameraAttributesPractical_main")
+current = true
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="LogoScreen" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("5_theme")
+script = ExtResource("2_logo")
+
+[node name="LogoTexture" type="TextureRect" parent="UI/LogoScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -150.0
+offset_right = 150.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LoginScreen" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("5_theme")
+script = ExtResource("3_login")
+
+[node name="PanelContainer" type="PanelContainer" parent="UI/LoginScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -150.0
+offset_right = 200.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/LoginScreen/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="UI/LoginScreen/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "登录"
+horizontal_alignment = 1
+
+[node name="UsernameInput" type="LineEdit" parent="UI/LoginScreen/PanelContainer/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "用户名"
+alignment = 1
+
+[node name="PasswordInput" type="LineEdit" parent="UI/LoginScreen/PanelContainer/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "密码"
+alignment = 1
+secret = true
+
+[node name="ErrorLabel" type="Label" parent="UI/LoginScreen/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.3, 0.3, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LoginButton" type="Button" parent="UI/LoginScreen/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "登录"
+
+[node name="RegisterButton" type="Button" parent="UI/LoginScreen/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "注册新账号"
+
+[node name="LoadingScreen" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("5_theme")
+script = ExtResource("4_loading")
+
+[node name="ColorRect" type="ColorRect" parent="UI/LoadingScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.901961)
+
+[node name="CenterContainer" type="CenterContainer" parent="UI/LoadingScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/LoadingScreen/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="LoadingLabel" type="Label" parent="UI/LoadingScreen/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "加载中..."
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="UI/LoadingScreen/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 20)
+layout_mode = 2
+show_percentage = false
+
+[node name="TipsLabel" type="Label" parent="UI/LoadingScreen/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+text = "提示：卡牌可以通过拖拽来使用"
+horizontal_alignment = 1 
