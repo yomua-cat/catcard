@@ -1,0 +1,31 @@
+{
+    "card_info": {
+        "id": "iron_wall",
+        "name": "披甲",
+        "description": "获得两点防御值",
+        "type": "defense",
+        "rarity": "common"
+    },
+    "card_effects": {
+        "main_effect": {
+            "type": "gain_defense",
+            "value": 2,
+            "target_type": "self"
+        },
+        "sub_effects": []
+    },
+    "card_conditions": {
+        "use_conditions": [],
+        "trigger_conditions": []
+    },
+    "card_visuals": {
+        "image": "res://assets/cards/iron_wall/card_image.png",
+        "animation": "res://assets/animations/iron_wall/card_animation.tres",
+        "sound": "res://assets/audio/cards/iron_wall_sound.ogg"
+    },
+    "card_gameplay": {
+        "can_be_responded": true,
+        "can_be_copied": true,
+        "can_be_discarded": true
+    }
+} 

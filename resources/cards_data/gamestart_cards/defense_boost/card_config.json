@@ -1,0 +1,42 @@
+{
+    "card_info": {
+        "id": "defense_boost",
+        "name": "防御强化",
+        "description": "本回合获得的防御值增加一点",
+        "type": "defense",
+        "rarity": "common",
+        "cost": 1
+    },
+    "card_effects": {
+        "main_effect": {
+            "type": "add_status",
+            "status": {
+                "id": "defense_boost",
+                "name": "防御强化",
+                "description": "本回合获得的防御值增加一点",
+                "duration": "end_of_turn",
+                "effect": {
+                    "type": "modify_defense_gain",
+                    "value": 1,
+                    "is_addition": true
+                }
+            },
+            "target_type": "self"
+        },
+        "sub_effects": []
+    },
+    "card_conditions": {
+        "use_conditions": [],
+        "trigger_conditions": []
+    },
+    "card_visuals": {
+        "image": "res://assets/cards/defense_boost/card_image.png",
+        "animation": "res://assets/animations/defense_boost/card_animation.tres",
+        "sound": "res://assets/audio/cards/defense_boost_sound.ogg"
+    },
+    "card_gameplay": {
+        "can_be_responded": true,
+        "can_be_copied": true,
+        "can_be_discarded": true
+    }
+} 

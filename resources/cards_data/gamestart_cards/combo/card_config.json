@@ -1,0 +1,37 @@
+{
+    "card_info": {
+        "id": "combo",
+        "name": "巧劲",
+        "description": "造成一点伤害与一点额外伤害",
+        "type": "attack",
+        "rarity": "common"
+    },
+    "card_effects": {
+        "main_effect": {
+            "type": "damage",
+            "value": 1,
+            "target_type": "single_enemy"
+        },
+        "sub_effects": [
+            {
+                "type": "extra_damage",
+                "value": 1,
+                "target_type": "last_target"
+            }
+        ]
+    },
+    "card_conditions": {
+        "use_conditions": [],
+        "trigger_conditions": []
+    },
+    "card_visuals": {
+        "image": "res://assets/cards/combo/card_image.png",
+        "animation": "res://assets/animations/combo/card_animation.tres",
+        "sound": "res://assets/audio/cards/combo_sound.ogg"
+    },
+    "card_gameplay": {
+        "can_be_responded": true,
+        "can_be_copied": true,
+        "can_be_discarded": true
+    }
+} 

@@ -1,0 +1,41 @@
+{
+    "card_info": {
+        "id": "trade",
+        "name": "交易",
+        "description": "将两张手牌与目标两张手牌交换",
+        "type": "utility",
+        "rarity": "rare",
+        "cost": 1
+    },
+    "card_effects": {
+        "main_effect": {
+            "type": "exchange_cards",
+            "value": 2,
+            "target_type": "single_enemy"
+        },
+        "sub_effects": []
+    },
+    "card_conditions": {
+        "use_conditions": [
+            {
+                "type": "has_cards_in_hand",
+                "value": 2
+            },
+            {
+                "type": "target_has_cards_in_hand",
+                "value": 2
+            }
+        ],
+        "trigger_conditions": []
+    },
+    "card_visuals": {
+        "image": "res://assets/cards/trade/card_image.png",
+        "animation": "res://assets/animations/trade/card_animation.tres",
+        "sound": "res://assets/audio/cards/trade_sound.ogg"
+    },
+    "card_gameplay": {
+        "can_be_responded": true,
+        "can_be_copied": false,
+        "can_be_discarded": true
+    }
+} 

@@ -1,0 +1,31 @@
+{
+    "card_info": {
+        "id": "defense_stance",
+        "name": "防御",
+        "description": "获得一点防御值",
+        "type": "defense",
+        "rarity": "common"
+    },
+    "card_effects": {
+        "main_effect": {
+            "type": "gain_defense",
+            "value": 1,
+            "target_type": "self"
+        },
+        "sub_effects": []
+    },
+    "card_conditions": {
+        "use_conditions": [],
+        "trigger_conditions": []
+    },
+    "card_visuals": {
+        "image": "res://assets/cards/defense_stance/card_image.png",
+        "animation": "res://assets/animations/defense_stance/card_animation.tres",
+        "sound": "res://assets/audio/cards/defense_stance_sound.ogg"
+    },
+    "card_gameplay": {
+        "can_be_responded": true,
+        "can_be_copied": true,
+        "can_be_discarded": true
+    }
+} 

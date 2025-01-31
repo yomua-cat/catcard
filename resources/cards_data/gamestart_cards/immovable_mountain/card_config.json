@@ -1,0 +1,32 @@
+{
+    "card_info": {
+        "id": "immovable_mountain",
+        "name": "不动如山",
+        "description": "获得两点固定防御值(固定防御值:该防御值不会自动减少)",
+        "type": "defense",
+        "rarity": "rare",
+        "cost": 2
+    },
+    "card_effects": {
+        "main_effect": {
+            "type": "add_permanent_defense",
+            "value": 2,
+            "target_type": "self"
+        },
+        "sub_effects": []
+    },
+    "card_conditions": {
+        "use_conditions": [],
+        "trigger_conditions": []
+    },
+    "card_visuals": {
+        "image": "res://assets/cards/immovable_mountain/card_image.png",
+        "animation": "res://assets/animations/immovable_mountain/card_animation.tres",
+        "sound": "res://assets/audio/cards/immovable_mountain_sound.ogg"
+    },
+    "card_gameplay": {
+        "can_be_responded": true,
+        "can_be_copied": true,
+        "can_be_discarded": true
+    }
+} 

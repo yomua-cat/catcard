@@ -1,0 +1,37 @@
+{
+    "card_info": {
+        "id": "shield_repair",
+        "name": "护盾修复",
+        "description": "将两点防御值转换为固定防御值",
+        "type": "defense",
+        "rarity": "common",
+        "cost": 1
+    },
+    "card_effects": {
+        "main_effect": {
+            "type": "convert_defense_to_permanent",
+            "value": 2,
+            "target_type": "self"
+        },
+        "sub_effects": []
+    },
+    "card_conditions": {
+        "use_conditions": [
+            {
+                "type": "defense_greater_than_or_equal",
+                "value": 2
+            }
+        ],
+        "trigger_conditions": []
+    },
+    "card_visuals": {
+        "image": "res://assets/cards/shield_repair/card_image.png",
+        "animation": "res://assets/animations/shield_repair/card_animation.tres",
+        "sound": "res://assets/audio/cards/shield_repair_sound.ogg"
+    },
+    "card_gameplay": {
+        "can_be_responded": true,
+        "can_be_copied": true,
+        "can_be_discarded": true
+    }
+} 

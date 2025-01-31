@@ -1,0 +1,40 @@
+{
+    "card_info": {
+        "id": "safe_box",
+        "name": "保险箱",
+        "description": "使自身的手牌不会被技能效果移出手中",
+        "type": "utility",
+        "rarity": "rare"
+    },
+    "card_effects": {
+        "main_effect": {
+            "type": "add_status",
+            "status": {
+                "id": "hand_protection",
+                "name": "手牌保护",
+                "description": "手牌不会被技能效果移出手中",
+                "duration": "permanent",
+                "effect": {
+                    "type": "prevent_hand_manipulation",
+                    "value": true
+                }
+            },
+            "target_type": "self"
+        },
+        "sub_effects": []
+    },
+    "card_conditions": {
+        "use_conditions": [],
+        "trigger_conditions": []
+    },
+    "card_visuals": {
+        "image": "res://assets/cards/safe_box/card_image.png",
+        "animation": "res://assets/animations/safe_box/card_animation.tres",
+        "sound": "res://assets/audio/cards/safe_box_sound.ogg"
+    },
+    "card_gameplay": {
+        "can_be_responded": true,
+        "can_be_copied": true,
+        "can_be_discarded": true
+    }
+} 

@@ -1,0 +1,115 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6x8v4hfq8og1"]
+
+[ext_resource type="Script" path="res://scripts/main/main_scene.gd" id="1_main"]
+[ext_resource type="Theme" path="res://ui/themes/main_theme.tres" id="2_theme"]
+[ext_resource type="Script" path="res://scripts/ui/main_menu.gd" id="3_menu"]
+[ext_resource type="Script" path="res://scripts/ui/loading_screen.gd" id="4_loading"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_main")
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+
+[node name="MainMenu" type="Control" parent="UILayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_theme")
+script = ExtResource("3_menu")
+
+[node name="Background" type="ColorRect" parent="UILayer/MainMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0784314, 0.0784314, 0.0784314, 1)
+
+[node name="Title" type="Label" parent="UILayer/MainMenu"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_top = 100.0
+offset_right = 100.0
+offset_bottom = 150.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 36
+text = "猫猫牌"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="UILayer/MainMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UILayer/MainMenu/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="SinglePlayerBtn" type="Button" parent="UILayer/MainMenu/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "单人游戏"
+
+[node name="MultiplayerBtn" type="Button" parent="UILayer/MainMenu/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "多人游戏"
+
+[node name="SettingsBtn" type="Button" parent="UILayer/MainMenu/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "设置"
+
+[node name="QuitBtn" type="Button" parent="UILayer/MainMenu/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "退出"
+
+[node name="LoadingScreen" type="Control" parent="UILayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_theme")
+script = ExtResource("4_loading")
+
+[node name="Background" type="ColorRect" parent="UILayer/LoadingScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0784314, 0.0784314, 0.0784314, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="UILayer/LoadingScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UILayer/LoadingScreen/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="StatusLabel" type="Label" parent="UILayer/LoadingScreen/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "加载中..."
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="UILayer/LoadingScreen/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 30)
+layout_mode = 2
+max_value = 1.0 

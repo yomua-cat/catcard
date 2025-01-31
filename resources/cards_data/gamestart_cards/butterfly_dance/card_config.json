@@ -1,0 +1,41 @@
+{
+    "card_info": {
+        "id": "butterfly_dance",
+        "name": "蝶舞",
+        "description": "对除自身外的目标造成1.5点伤害,并抽取［当前存活人数减一］张卡牌",
+        "type": "attack_utility",
+        "rarity": "rare",
+        "cost": 2
+    },
+    "card_effects": {
+        "main_effect": {
+            "type": "damage",
+            "value": 1.5,
+            "target_type": "all_others"
+        },
+        "sub_effects": [
+            {
+                "type": "dynamic_draw",
+                "formula": {
+                    "base": "alive_players_count",
+                    "addition": -1
+                },
+                "target_type": "self"
+            }
+        ]
+    },
+    "card_conditions": {
+        "use_conditions": [],
+        "trigger_conditions": []
+    },
+    "card_visuals": {
+        "image": "res://assets/cards/butterfly_dance/card_image.png",
+        "animation": "res://assets/animations/butterfly_dance/card_animation.tres",
+        "sound": "res://assets/audio/cards/butterfly_dance_sound.ogg"
+    },
+    "card_gameplay": {
+        "can_be_responded": true,
+        "can_be_copied": true,
+        "can_be_discarded": true
+    }
+} 

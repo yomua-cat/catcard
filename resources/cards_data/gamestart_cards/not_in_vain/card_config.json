@@ -1,0 +1,48 @@
+{
+    "card_info": {
+        "id": "not_in_vain",
+        "name": "不为瓦全",
+        "description": "损失两点血量,对一名目标造成三点伤害并抽取目标手中一张卡牌",
+        "type": "sacrifice_attack",
+        "rarity": "rare",
+        "cost": 2
+    },
+    "card_effects": {
+        "main_effect": {
+            "type": "self_damage",
+            "value": 2,
+            "target_type": "self"
+        },
+        "sub_effects": [
+            {
+                "type": "damage",
+                "value": 3,
+                "target_type": "single_enemy"
+            },
+            {
+                "type": "draw_from_target",
+                "value": 1,
+                "target_type": "last_target"
+            }
+        ]
+    },
+    "card_conditions": {
+        "use_conditions": [
+            {
+                "type": "health_greater_than",
+                "value": 2
+            }
+        ],
+        "trigger_conditions": []
+    },
+    "card_visuals": {
+        "image": "res://assets/cards/not_in_vain/card_image.png",
+        "animation": "res://assets/animations/not_in_vain/card_animation.tres",
+        "sound": "res://assets/audio/cards/not_in_vain_sound.ogg"
+    },
+    "card_gameplay": {
+        "can_be_responded": true,
+        "can_be_copied": true,
+        "can_be_discarded": true
+    }
+} 

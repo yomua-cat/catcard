@@ -1,0 +1,44 @@
+{
+    "card_info": {
+        "id": "last_stand",
+        "name": "背水一战",
+        "description": "对一名目标造成1.5点伤害,若使用时手牌不大于两张,则时造成的伤害翻倍(计入当前的增益效果)",
+        "type": "conditional_attack",
+        "rarity": "rare",
+        "cost": 2
+    },
+    "card_effects": {
+        "main_effect": {
+            "type": "conditional_damage",
+            "condition": {
+                "type": "hand_cards_less_than_or_equal",
+                "value": 2
+            },
+            "effect": {
+                "type": "damage",
+                "value": 3.0,
+                "target_type": "single_enemy"
+            },
+            "default_effect": {
+                "type": "damage",
+                "value": 1.5,
+                "target_type": "single_enemy"
+            }
+        },
+        "sub_effects": []
+    },
+    "card_conditions": {
+        "use_conditions": [],
+        "trigger_conditions": []
+    },
+    "card_visuals": {
+        "image": "res://assets/cards/last_stand/card_image.png",
+        "animation": "res://assets/animations/last_stand/card_animation.tres",
+        "sound": "res://assets/audio/cards/last_stand_sound.ogg"
+    },
+    "card_gameplay": {
+        "can_be_responded": true,
+        "can_be_copied": true,
+        "can_be_discarded": true
+    }
+} 

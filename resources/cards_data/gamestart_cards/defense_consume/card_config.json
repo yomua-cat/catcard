@@ -1,0 +1,37 @@
+{
+    "card_info": {
+        "id": "defense_consume",
+        "name": "以身为盾",
+        "description": "损失半点血量并获得1.5点防御值",
+        "type": "defense",
+        "rarity": "common"
+    },
+    "card_effects": {
+        "main_effect": {
+            "type": "lose_health",
+            "value": 0.5,
+            "target_type": "self"
+        },
+        "sub_effects": [
+            {
+                "type": "gain_defense",
+                "value": 1.5,
+                "target_type": "self"
+            }
+        ]
+    },
+    "card_conditions": {
+        "use_conditions": [],
+        "trigger_conditions": []
+    },
+    "card_visuals": {
+        "image": "res://assets/cards/defense_consume/card_image.png",
+        "animation": "res://assets/animations/defense_consume/card_animation.tres",
+        "sound": "res://assets/audio/cards/defense_consume_sound.ogg"
+    },
+    "card_gameplay": {
+        "can_be_responded": true,
+        "can_be_copied": true,
+        "can_be_discarded": true
+    }
+} 

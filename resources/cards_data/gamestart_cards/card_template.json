@@ -1,0 +1,32 @@
+{
+    "card_info": {
+        "id": "template",
+        "name": "模板卡牌",
+        "description": "这是一个模板卡牌",
+        "type": "normal",
+        "rarity": "common",
+        "cost": 1
+    },
+    "card_effects": {
+        "main_effect": {
+            "type": "none",
+            "value": 0,
+            "target_type": "none"
+        },
+        "sub_effects": []
+    },
+    "card_conditions": {
+        "use_conditions": [],
+        "trigger_conditions": []
+    },
+    "card_visuals": {
+        "image": "",
+        "animation": "",
+        "sound": ""
+    },
+    "card_gameplay": {
+        "can_be_responded": true,
+        "can_be_copied": true,
+        "can_be_discarded": true
+    }
+} 

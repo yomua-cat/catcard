@@ -1,0 +1,51 @@
+{
+    "card_info": {
+        "id": "sharp_edge",
+        "name": "锋芒毕露",
+        "description": "对一名目标造成1.5点伤害,并使下一张使用的所造成伤害不大于两点的卡牌伤害×1.5(向下取整)",
+        "type": "attack_buff",
+        "rarity": "rare",
+        "cost": 2
+    },
+    "card_effects": {
+        "main_effect": {
+            "type": "damage",
+            "value": 1.5,
+            "target_type": "single_enemy"
+        },
+        "sub_effects": [
+            {
+                "type": "add_status",
+                "status": {
+                    "id": "damage_amplify",
+                    "name": "伤害增幅",
+                    "description": "下一张使用的所造成伤害不大于两点的卡牌伤害×1.5",
+                    "duration": "next_damage_card",
+                    "condition": {
+                        "type": "damage_less_than_or_equal",
+                        "value": 2
+                    },
+                    "effect": {
+                        "type": "multiply_damage",
+                        "value": 1.5
+                    }
+                },
+                "target_type": "self"
+            }
+        ]
+    },
+    "card_conditions": {
+        "use_conditions": [],
+        "trigger_conditions": []
+    },
+    "card_visuals": {
+        "image": "res://assets/cards/sharp_edge/card_image.png",
+        "animation": "res://assets/animations/sharp_edge/card_animation.tres",
+        "sound": "res://assets/audio/cards/sharp_edge_sound.ogg"
+    },
+    "card_gameplay": {
+        "can_be_responded": true,
+        "can_be_copied": true,
+        "can_be_discarded": true
+    }
+} 

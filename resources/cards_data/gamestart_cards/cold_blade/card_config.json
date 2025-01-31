@@ -1,0 +1,47 @@
+{
+    "card_info": {
+        "id": "cold_blade",
+        "name": "寒芒出鞘",
+        "description": "对一名目标造成一点伤害并使下一张使用的攻击卡牌造成的伤害加半点",
+        "type": "attack_buff",
+        "rarity": "common",
+        "cost": 1
+    },
+    "card_effects": {
+        "main_effect": {
+            "type": "damage",
+            "value": 1,
+            "target_type": "single_enemy"
+        },
+        "sub_effects": [
+            {
+                "type": "add_status",
+                "status": {
+                    "id": "damage_boost",
+                    "name": "伤害提升",
+                    "description": "下一张攻击卡牌造成的伤害加半点",
+                    "duration": "next_attack_card",
+                    "effect": {
+                        "type": "add_damage",
+                        "value": 0.5
+                    }
+                },
+                "target_type": "self"
+            }
+        ]
+    },
+    "card_conditions": {
+        "use_conditions": [],
+        "trigger_conditions": []
+    },
+    "card_visuals": {
+        "image": "res://assets/cards/cold_blade/card_image.png",
+        "animation": "res://assets/animations/cold_blade/card_animation.tres",
+        "sound": "res://assets/audio/cards/cold_blade_sound.ogg"
+    },
+    "card_gameplay": {
+        "can_be_responded": true,
+        "can_be_copied": true,
+        "can_be_discarded": true
+    }
+} 

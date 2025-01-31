@@ -1,0 +1,53 @@
+{
+    "game": {
+        "version": "1.0.0",
+        "name": "猫猫牌",
+        "min_players": 2,
+        "max_players": 2,
+        "initial_hand_size": 5,
+        "max_hand_size": 10,
+        "max_field_cards": 5,
+        "turn_time_limit": 60
+    },
+    "network": {
+        "port": 9527,
+        "max_connections": 100,
+        "timeout": 30,
+        "ping_interval": 5
+    },
+    "graphics": {
+        "default_resolution": {
+            "width": 1920,
+            "height": 1080
+        },
+        "target_fps": 60,
+        "vsync_enabled": true,
+        "fullscreen": false
+    },
+    "audio": {
+        "master_volume": 1.0,
+        "music_volume": 0.8,
+        "sfx_volume": 0.7,
+        "voice_volume": 0.9
+    },
+    "gameplay": {
+        "starting_life_points": 8000,
+        "max_deck_size": 60,
+        "min_deck_size": 40,
+        "max_extra_deck_size": 15,
+        "phases": [
+            "抽卡阶段",
+            "准备阶段",
+            "主要阶段1",
+            "战斗阶段",
+            "主要阶段2",
+            "结束阶段"
+        ]
+    },
+    "debug": {
+        "enabled": true,
+        "log_level": "info",
+        "show_fps": false,
+        "show_debug_info": false
+    }
+} 
