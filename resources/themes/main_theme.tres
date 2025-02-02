@@ -1,0 +1,15 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://c6q2p4g4mj3gx"]
+
+[ext_resource type="FontVariation" uid="uid://c2p5hkjvx8p4d" path="res://resources/fonts/default_font.tres" id="1_default"]
+
+[resource]
+default_font = ExtResource("1_default")
+default_font_size = 16
+
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(0.8, 0.8, 0.8, 1)
+
+Label/colors/font_color = Color(0.875, 0.875, 0.875, 1) 

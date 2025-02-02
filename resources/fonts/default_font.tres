@@ -1,0 +1,8 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://c2p5hkjvx8p4d"]
+
+[ext_resource type="SystemFont" uid="uid://b8g6kxfn6j4ga" path="res://resources/fonts/system_font.tres" id="1_mnk4d"]
+
+[resource]
+base_font = ExtResource("1_mnk4d")
+spacing_top = -2
+spacing_bottom = -2 
