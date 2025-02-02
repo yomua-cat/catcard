@@ -14,36 +14,22 @@ export_presets.cfg
 data_*/
 mono_crash.*.json
 
-# Android build
-android_build/
-*.apk
-*.aab
-
 # System/tool-specific ignores
 .DS_Store
+Thumbs.db
 .directory
 *~
-*.blend1
+
+# VSCode specific ignores
 .vscode/
-.vs/
+*.code-workspace
 
-# Build directories
-export/
-build/
-dist/
+# Build and export directories
+builds/
+exports/
 
-# Logs and databases
-*.log
-*.sql
-*.sqlite
-
-# Environment variables
-.env
-.env.*
-
-# IDE specific files
-.idea/
+# Temporary files
+*.tmp
+*.temp
 *.swp
-*.swo
-*.swn
 *.bak 

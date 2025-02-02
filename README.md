@@ -1,58 +1,58 @@
-# 猫猫牌 - 多人对战卡牌游戏
+# 猫猫牌
 
-## 项目简介
+这是一个使用 Godot 4.2 开发的卡牌游戏项目。
 
-这是一个基于Godot 4.2.2开发的跨平台多人对战卡牌游戏,支持PC和Android平台.
+## 项目结构
 
-## 技术特性
-
-- 基于Godot 4.2.2引擎开发
-- 支持PC和Android双端
-- 实时多人对战
-- 现代化UI界面
-- 完整的卡牌系统
+```
+├── scenes/     # 场景文件
+├── scripts/    # 脚本文件
+├── resources/  # 资源文件
+├── addons/     # 插件目录
+│   └── card_engine/  # Godot Card Game Framework
+└── ui/        # UI相关文件
+```
 
 ## 开发环境要求
 
-- Godot 4.2.2
-- Android SDK (用于Android构建)
-- Android Studio (可选,用于Android调试)
+- Godot 4.2
+- 编辑器：推荐使用 VSCode + GDScript 插件
 
-## 目录结构
+## 使用的框架
 
-```plaintext
-项目根目录/
-├── addons/          # Godot插件
-├── assets/          # 游戏资源
-├── scenes/          # 场景文件
-├── scripts/         # 脚本文件
-├── resources/       # 配置资源
-├── ui/              # UI相关
-├── network/         # 网络相关
-├── tests/           # 测试文件
-├── docs/            # 文档
-└── export/          # 导出配置
-```
+本项目使用了 [Godot Card Game Framework](https://github.com/db0/godot-card-game-framework) 作为卡牌游戏框架。这是一个功能丰富的卡牌游戏开发框架，提供以下特性：
 
-## 开发指南
+- 完整的卡牌管理系统
+- 拖放操作支持
+- 卡牌堆管理
+- 动画系统
+- 多人游戏支持
+- 模块化设计
+- 丰富的自定义选项
 
-1. 克隆项目
-2. 使用Godot 4.2.2打开项目
-3. 安装必要的插件
-4. 运行项目
+## 如何运行
 
-## 构建说明
+1. 克隆项目到本地
+2. 使用 Godot 4.2 打开项目
+3. 在项目设置中确保卡牌引擎插件已启用
+4. 点击运行按钮即可启动游戏
 
-### PC版本
+## 开发规范
 
-1. 打开Godot项目
-2. 选择"Export"
-3. 选择Windows平台
-4. 点击"Export Project"
+1. 场景文件(.tscn)存放在 scenes 目录
+2. 脚本文件(.gd)存放在 scripts 目录
+3. 资源文件(图片、音频等)存放在 resources 目录
+4. UI相关场景和资源存放在 ui 目录
 
-### Android版本
+## 卡牌系统开发指南
 
-1. 确保已安装Android构建模板
-2. 配置Android SDK路径
-3. 选择Android平台
-4. 点击"Export Project"
+1. 所有卡牌预制体应放在 `scenes/cards` 目录下
+2. 卡牌数据配置文件存放在 `resources/cards` 目录下
+3. 卡牌相关脚本存放在 `scripts/cards` 目录下
+4. 使用框架提供的 API 进行卡牌逻辑开发
+
+## 注意事项
+
+1. 修改卡牌框架源码时需谨慎，最好创建自定义脚本进行功能扩展
+2. 定期备份卡牌数据和自定义内容
+3. 遵循框架的最佳实践和设计模式 
